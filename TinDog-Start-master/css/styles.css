@@ -1,0 +1,200 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+.container-fluid{
+    padding: 7% 15%;
+}/*added padding to the contents where this class is applied.. that is approx. 4 times.*/
+
+/* this the section for the coloured elements as well as the white elements on our website so we dont 
+have to write again and again */
+.coloured-selction{
+    color:#fff;
+    background-color: #ff4c68;
+}
+
+.white-section{
+    background-color: #fff;
+}
+/* navigation bar */
+
+.navbar{
+    padding:0 0 4.5rem;
+}
+
+.navbar-brand{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.nav-item{
+    padding: 0 18px;
+}
+
+.nav-link{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 1.2rem;
+
+}
+
+/* Title */
+
+#title{
+    text-align: left;
+}
+.heading{
+    font-family: 'Montserrat', sans-serif;
+    size: 3rem;
+    line-height: 1.5;
+    font-weight: 900;
+
+    /* changing the font weight of the heading to 900. */
+}
+
+
+/*******IMPORTANT AND DIFFERENT INFO**/
+#title .container-fluid{
+    padding:3% 15% 7%;/*This will only apply this kink of padding to the container fluid contained in the title class*/
+}
+/* this is mroe specific than the general heading given to the class container-fluid */
+
+/* Download Buttons */
+
+.download-button{
+    margin: 4.5rem 1rem 0 0;
+}
+
+/* Title image */
+.title-image{
+    width: 20%;
+    transform:rotate(30deg);
+    position: absolute;
+    right:20%;
+    /* z-index:-1; */
+}
+
+
+
+/* features */
+
+#features{
+    position: relative;
+    /* z-index:1; */
+}
+.features-heading{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.features-image{
+    padding-bottom: 10px;
+    color:#ef8172;
+}
+
+.feature-box{
+    padding: 5%;
+}
+
+.features-desc{
+    color:#B2B2B2;
+}
+.features-image:hover{ /*this is to add the hover state so that it changes color when we hover over it.*/
+    color:#ff4c68
+}
+
+/* Testimonials */
+
+#testimonials{
+    background-color: #ef8172;
+    /* id selectors override the class selectors so testimonials section ka bg-color yahi hoga instead 
+    of that other reddish color. */
+    color: white;
+}
+.testimonial-text{
+    font-weight: 900;
+    font-size: 2.5rem;
+    line-height: 1.5;
+}
+
+.testimonial-image{
+    width: 15%;
+    border-radius: 100%;
+    margin: 20px;
+}
+
+
+/* press */
+#press{
+    background-color: #ef8172;
+    /* id selectors override the class selectors so press section ka bg-color yahi hoga instead 
+    of that other reddish color. */
+    padding-bottom: 3%;
+}
+
+.press-image{
+    width: 15%;
+    padding: 20px 20px 50px;
+}
+
+/* Pricing section */
+#pricing{
+    padding: 100px;
+}
+.pricing-heading{
+    font-weight:900;
+    line-height: 1.5;
+}
+.cost{
+    font-weight:900;
+}
+.pricing-column{
+    padding:30px 20px;
+}
+
+/* call to action */
+/* iska background colour wo coloured-section mai se hi aa jata hai so baar baar likhna not necessary */
+.action-text{
+    font-weight: 900;
+    font-size: 2.5rem;
+    color:#fff;
+    margin:0 15%;
+    line-height: 1.5;
+}
+
+/* Footer */
+/* #footer{
+    background-color: #fff;
+} */
+/* footer ko bg-color white white-section se mil jata hai so no need to mention extra.*/
+.footer-icons{
+    padding: 10px 10px;
+}
+.footer-icons:hover{
+    color:black;
+}
+.footer-text{
+    color:#B2B2B2;
+    font-size:0.8rem;
+}
+.insta-email{
+    color:red;
+}
+
+
+/* Media Query */
+@media (max-width:768px){/*these will only be implemented if the size of the screen is less than 768 px.
+    this is used so that our website can be both mobile and tab friendly*/
+    #title{
+        text-align:center;
+    }
+    .title-image{
+        position: static;
+        transform:rotate(0deg);
+        width:60%;
+        padding-top: 20px;
+    }
+}

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>TinDog</title>
+    <!--Bootsrap link-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!--linking our css file below.-->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!--this link is for the apple and google play icon.. we need to go to the fontawesome.com and 
+      log into out id and then we will get this link to add this to our web page.-->
+    <script
+      src="https://kit.fontawesome.com/c0053fdaf9.js"
+      crossorigin="anonymous">
+    </script>
+
+    <!--next three links are for font family, we can generate this from font.google.com -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;900&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <!-- bootstrap script for js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <section class="coloured-selction" id="title">
+      <!-- here we implement a fluid container to apply padding to the whole structure.-->
+      <div class="container-fluid">
+        <!-- Nav Bar -->
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <!--navbar-expand-lg mai wo tablet(md) view hote hi
+        toogler mai convert ho jata hai... compared to md jisme mai wo mobile i.e, small hone ke pehle 
+        tak expanded rhta hai-->
+          <a class="navbar-brand">tindog</a>
+          <!-- navbar-brand to highlight the tindog as a brand in the navigation bar -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsable"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsable">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#footer">Contact</a
+                ><!--The href=#footer will make the web page
+                go to the footer section(section with id footer) when clicked on in the webpage.-->
+                <!--this makes the navigation bar responsive.-->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pricing">Pricing</a
+                ><!-- to understand a bit about the navigation bar 
+                    refer to the source code of index-navbar.html in the Bootsstrap-install folder.-->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#cta">Download</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Title -->
+
+        <div class="row">
+          <div class="col-md-6">
+            <!--making the title text and the mobile icon share the same row and be responsive.-->
+            <h1 class="heading">Meet new and interesting dogs nearby.</h1>
+            <!-- the i tag stands for italics tag and it is used to implement the apple icon and the google 
+              play icon in the download button -->
+            <button type="button" class="btn btn-dark btn-lg download-button">
+              <i class="fa-brands fa-apple"></i> Download
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-light btn-lg download-button"
+            >
+              <i class="fa-brands fa-google-play"></i> Download
+            </button>
+          </div>
+          <!--the class in this button tag is to implement bootstrap to style our download buttons.-->
+
+          <div class="col-md-6 title-image-container">
+            <img
+              class="title-image"
+              src="images/iphone6.png"
+              alt="iphone-mockup"
+            />
+          </div>
+        </div>
+        <!--just made the h1 and the two buttons apply one half of the webpage and the image of the 
+      iphone the other half of the webpage. These will come in a colum when we switch to phone view.-->
+      </div>
+    </section>
+
+    <!-- Features -->
+
+    <section class="white-section" id="features">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- normal stuff of making it responsive nothing too fancy here. -->
+          <div class="col-md-4 feature-box">
+            <i class="fa-solid fa-circle-check features-image fa-4x"></i>
+            <!-- we use the fa-4x to increase the size of the icon and make it larger significantly. -->
+            <h3 class="features-heading">Easy to use.</h3>
+            <p class="features-desc">
+              So easy to use, even your dog could do it.
+            </p>
+          </div>
+
+          <div class="col-md-4 feature-box">
+            <i class="fa-solid fa-bullseye features-image fa-4x"></i>
+            <h3 class="features-heading">Elite Clientele</h3>
+            <p class="features-desc">
+              We have all the dogs, the greatest dogs.
+            </p>
+          </div>
+
+          <div class="col-md-4 feature-box">
+            <i class="fa-solid fa-heart features-image fa-4x"></i>
+            <h3 class="features-heading">Guaranteed to work.</h3>
+            <p class="features-desc">
+              Find the love of your dog's life or your money back.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+
+    <section class="coloured-selction" id="testimonials">
+      <!-- for more info on the carousel, refer to the carousel.html in the bootstrap-install folder.-->
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <a
+            role="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></a>
+          <a
+            role="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></a>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active container-fluid">
+            <h2 class="testimonial-text">
+              I no longer have to sniff other dogs for love. I've found the
+              hottest Corgi on TinDog. Woof.
+            </h2>
+            <img
+              class="testimonial-image"
+              src="images/dog-img.jpg"
+              alt="dog-profile"
+            />
+            <em>Pebbles, New York</em>
+          </div>
+          <div class="carousel-item container-fluid">
+            <!--inserted both the testimonials inside the testimonial items.-->
+            <h2 class="testimonial-text">
+              My dog used to be so lonely, but with TinDog's help, they've found
+              the love of their life. I think.
+            </h2>
+            <img
+              class="testimonial-image"
+              src="images/lady-img.jpg"
+              alt="lady-profile"
+            />
+            <em>Beverly, Illinois</em>
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          role="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a
+          class="carousel-control-next"
+          role="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <!-- we are not using the next and prev written near the arrow heads -->
+        </a>
+      </div>
+    </section>
+
+    <!-- Press -->
+
+    <section class="coloured-selction" id="press">
+      <img class="press-image" src="images/techcrunch.png" alt="tc-logo" />
+      <img class="press-image" src="images/tnw.png" alt="tnw-logo" />
+      <img
+        class="press-image"
+        src="images/bizinsider.png"
+        alt="biz-insider-logo"
+      />
+      <img class="press-image" src="images/mashable.png" alt="mashable-logo" />
+    </section>
+
+    <!-- Pricing -->
+
+    <section class="white-section" id="pricing">
+      <h2 class="pricing-heading">A Plan for Every Dog's Needs</h2>
+      <p>Simple and affordable price plans for your and your dog.</p>
+
+      <div class="row">
+        <!-- we can either use row or we can use card-group to make it all into 1 row i.e,
+         the pricing options into one row.-->
+        <div class="pricing-column col-md-4 col-sm-6">
+          <!-- this is for grid placement of the plans-->
+          <div class="card">
+            <!-- we use cards to make a card for each payment option-->
+            <div class="card-header">
+              <h3 class="pricing-heading">Chihuahua</h3>
+              <!-- a card has 3 parts header, body and footer,
+                 here we use header and body only.-->
+            </div>
+            <div class="card-body">
+              <h2 class="cost">Free</h2>
+              <p>5 Matches Per Day</p>
+              <p>10 Messages Per Day</p>
+              <p>Unlimited App Usage</p>
+              <p style="visibility: hidden">,</p>
+              <!--this is a paragraph element which wont be 
+                displayed on the website. I used it to make the size of the cards displaying pricing same.-->
+              <div class="d-grid gap-2">
+                <button type="button" class="btn btn-outline-dark">
+                  <!-- to make the button block and cover
+                   the whole box created to display the pricing-->
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pricing-column col-md-4 col-sm-6">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="pricing-heading">Labrador</h3>
+            </div>
+            <div class="card-body">
+              <h2 class="cost">$49 / mo</h2>
+              <p>Unlimited Matches</p>
+              <p>Unlimited Messages</p>
+              <p>Unlimited App Usage</p>
+              <p style="visibility: hidden">,</p>
+              <div class="d-grid gap-2">
+                <button type="button" class="btn btn-dark">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pricing-column col-md-4">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="pricing-heading">Mastiff</h3>
+            </div>
+            <div class="card-body">
+              <h2 class="cost">$99 / mo</h2>
+              <p>Pirority Listing</p>
+              <p>Unlimited Matches</p>
+              <p>Unlimited Messages</p>
+              <p>Unlimited App Usage</p>
+              <div class="d-grid gap-2">
+                <button type="button" class="btn btn-dark">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+
+    <section class="coloured-selction" id="cta">
+      <div class="container-fluid">
+        <h3 class="action-text">
+          Find the True Love of Your Dog's Life Today.
+        </h3>
+        <button type="button" class="btn btn-dark btn-large download-button">
+          <i class="fa-brands fa-apple"></i> Download
+        </button>
+        <button type="button" class="btn btn-light btn-large download-button">
+          <i class="fa-brands fa-google-play"></i> Download
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="white-section" id="footer">
+      <div class="container-fluid">
+        <a href="https://twitter.com/"
+          ><i class="fa-brands fa-twitter footer-icons"></i
+        ></a>
+        <a href="https://www.facebook.com/"
+          ><i class="fa-brands fa-facebook footer-icons"></i
+        ></a>
+        <a href="https://www.instagram.com/"
+          ><i class="fa-brands fa-instagram footer-icons insta-email"></i
+        ></a>
+        <a href="https://www.gamil.com/"
+          ><i class="fa-solid fa-envelope footer-icons insta-email"></i></a>
+          <p class="footer-text">© Copyright 2023 Tindog</p>
+    </footer>
+  </body>
+</html>
